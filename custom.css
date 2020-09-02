@@ -1,0 +1,389 @@
+/* common CSS*/
+html,
+body{
+  margin: 2px;
+  padding:0;
+  background-image: radial-gradient(farthest-side at 60% 45%,  #FF7F50, #BC8F8F, #DAA520);
+}
+/* Header */
+header > nav > a > img{
+  transform: rotate(8deg);
+}
+/* Home */
+.Home{
+  margin-top: 3px;
+}
+
+#Name{
+  font-size: 4rem;
+  text-align: center;
+}
+
+#tagline{
+  margin-top: 1rem;
+  font-size: 2rem;
+  color: #FF4500;
+  text-align: center;
+}
+
+#Home > .container > .row > .col-md-12 > img{
+  margin-left: 0;
+  width: 100%;
+}
+
+#LeranMore{
+  padding: .4rem 1rem;
+  max-width: 7rem;
+  display: block;
+  margin: 0 auto;
+  border: 2px dashed #fff;
+  border-radius: 3rem;
+}
+
+#Contact{
+  margin-bottom: 2px;
+}
+
+#footer{
+  display: block;
+  background-color: #008B8B;
+}
+
+h2{
+  color: #4169E1;
+  text-align: center;
+  text-decoration:underline;
+}
+
+.glow {
+  color: #00FF7F;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #8B0000, 0 0 40px #8B0000, 0 0 50px #8B0000, 0 0 60px #8B0000, 0 0 70px #8B0000;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #8B0000, 0 0 40px #8B0000, 0 0 50px #8B0000, 0 0 60px #8B0000, 0 0 70px #8B0000, 0 0 80px #8B0000;
+  }
+}
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 15px; /* Place the button at the bottom of the page */
+  right: 50px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #D2691E; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+  opacity: 60%;
+}
+
+#myBtn:hover {
+  background-color: #00FF00; /* Add a dark-grey background on hover */
+  opacity: 100%;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* Dropdown Button */
+.btn {
+  background-color: #2196F3;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: absolute;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+  margin-left: 30px;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.btn:hover, .dropdown:hover .btn  {
+  background-color: #0b7dda;
+}
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #FFEBCD;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #FFC0CB;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+#more {display: none;}
+
+div.myinfo {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  background: rgb(0, 1, 1.5); /* Fallback color */
+  background: rgba(2, 1, 1.5, 0.8); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+}
+
+.skill-type {
+  width: 100%; /* Full width */
+  background-color: #ddd; /* Grey background */
+}
+
+.skills {
+  text-align: right; /* Right-align text */
+  padding-top: 10px; /* Add top padding */
+  padding-bottom: 10px; /* Add bottom padding */
+  color: white; /* White text color */
+}
+
+.html {width: 93%; background-color: #4CAF50;} /* Green */
+.css {width: 80%; background-color: #2196F3;} /* Blue */
+.js {width: 40%; background-color: #f44336;} /* Red */
+.python {width: 70%; background-color: #808080;} /* Dark Grey */
+.java {width: 45%; background-color: #98FB98;}
+.kali {width: 20%; background-color: #40E0D0;}
+.app {width: 20%; background-color: #BC8F8F;}
+.arduino {width: 87%; background-color: #FF6347;}
+.elec-deg {width: 95%; background-color: #C71585;}
+.test {width: 95%; background-color: #C0C0C0;}
+.blue {width: 85%; background-color: #DAA520;}
+.three-d {width: 85%; background-color: #00FFFF;}
+.robo {width: 90%; background-color: #DEB887;}
+.ppt {width: 91%; background-color: #696969;}
+.catm {width: 80%; background-color: #6A5ACD;}
+
+.btn0 {
+  border: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.danger {color: red;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn0 {
+  background-color: #3e8e41;
+}
+
+.imago {
+  background-image: url("img_nature.jpg"); /* The image used - important! */
+  background-size: cover;
+  position: relative; /* Needed to position the cutout text in the middle of the image */
+  height: 250px; /* Some height */
+}
+
+.Name {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  margin: 0 auto; /* Center the text container */
+  padding: 7px;
+  width: 100%;
+  text-align: center; /* Center text */
+  position: absolute; /* Position text */
+  top: 50%; /* Position text in the middle */
+  left: 50%; /* Position text in the middle */
+  transform: translate(-50%, -50%); /* Position text in the middle */
+  mix-blend-mode: multiply; /* This makes the cutout text possible */
+}
+
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#thumb, #thumb1, #thumb2, #thumb3, #thumb4{
+  border: 1px solid #ddd; /* Gray border */
+  border-radius: 4px;  /* Rounded border */
+  padding: 5px; /* Some padding */
+  width: 150px; /* Set a small width */
+}
+#thumb:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+.img-thumbnails{
+  margin-left: 5rem;
+}
+
+/* Style the close button */
+.topright {
+  float: right;
+  cursor: pointer;
+  font-size: 28px;
+}
+
+.topright:hover {color: red;}
+
+div.tabcontent {
+  overflow: auto;
+  white-space: nowrap;
+}
+.gcontact{
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  text-align: center;
+  display: block;
+}

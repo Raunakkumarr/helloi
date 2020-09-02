@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>gbg</title>
+    <link rel="icon" type="image/png" href="signature.png">
+    <style media="screen">
+        html,
+        body{
+          margin: 2px;
+          padding:0;
+          background-image: radial-gradient(farthest-side at 60% 45%,  #FF7F50, #BC8F8F, #DAA520);
+        }
+      /* The grid: Four equal columns that floats next to each other */
+        #thumb1 {
+          float: left;
+          width: 150px;
+          height: auto;
+          padding: 10px;
+          opacity: 0.8;
+          cursor: pointer;
+        }
+
+        /* Style the images inside the grid */
+
+        #thumb1:hover {
+          opacity: 1;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        /* Clear floats after the columns */
+        .imgrow1:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        /* The expanding image container (positioning is needed to position the close button and the text) */
+        .containerimg1 {
+          position: relative;
+          display: none;
+        }
+
+        /* Expanding image text */
+        #imgtext1 {
+          position: absolute;
+          bottom: 20px;
+          left: 120px;
+          color: white;
+          background-color: #A9A9A9;
+          font-size: 20px;
+        }
+
+        /* Closable button inside the image */
+        .closebtn1 {
+          position: absolute;
+          top: 10px;
+          right: 15px;
+          color: white;
+          font-size: 35px;
+          cursor: pointer;
+        }
+    </style>
+  </head>
+  <body>
+    <h2 style="color: #8A2BE2; text-align: center;">Google Business Group's (GBG) Bizfest Exhibition 2019</h2>
+    <p style="text-align: center; font-size: 1.5rem;">Led team of 4 from Agkiya Infotech in GBG.</p>
+
+    <!-- The grid: four columns -->
+    <div class="imgrow1" style="margin-left: 50px;">
+      <div class="columnimg1">
+        <img src="IMG_20191228_151906.jpg" alt="Teammates Ranjit(Right) and Bibek(Left)" onclick="myImgFunction1(this);" id="thumb1">
+      </div>
+      <div class="columnimg1">
+        <img src="IMG_20191228_153843.jpg" alt="Me(Left) and teammates Ranjit, Bibek" onclick="myImgFunction1(this);" id="thumb1">
+      </div>
+      <div class="columnimg1">
+        <img src="IMG_20191228_153909.jpg" alt="Me(Left) and teammate Ranjit(Right)" onclick="myImgFunction1(this);" id="thumb1">
+      </div>
+      <div class="columnimg1">
+        <img src="IMG_20191228_170444.jpg" alt="Recieved a coffee cup from Worldlink Communications!" onclick="myImgFunction1(this);" id="thumb1">
+      </div>
+      <div class="columnimg1">
+        <img src="IMG_20191228_192041.jpg" alt="Thats me!" onclick="myImgFunction1(this);" id="thumb1">
+      </div>
+    </div>
+
+    <!-- The expanding image container -->
+    <div class="containerimg1">
+      <!-- Close the image -->
+      <span onclick="this.parentElement.style.display='none'" class="closebtn1" style="color: #000000;">&times;</span>
+
+      <!-- Expanded image -->
+      <img id="expandedImg1" style="width: 1000px; margin-left: 100px;">
+
+      <!-- Image text -->
+      <div id="imgtext1"></div>
+    </div>
+
+    <script type="text/javascript">
+    function myImgFunction1(imgs1) {
+      // Get the expanded image
+      var expandImg1 = document.getElementById("expandedImg1");
+      // Get the image text
+      var imgText1 = document.getElementById("imgtext1");
+      // Use the same src in the expanded image as the image being clicked on from the grid
+      expandImg1.src = imgs1.src;
+      // Use the value of the alt attribute of the clickable image as text inside the expanded image
+      imgText1.innerHTML = imgs1.alt;
+      // Show the container element (hidden with CSS)
+      expandImg1.parentElement.style.display = "block";
+      }
+    </script>
+  </body>
+</html>

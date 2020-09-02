@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>set</title>
+    <link rel="icon" type="image/png" href="signature.png">
+    <style media="screen">
+        html,
+        body{
+          margin: 2px;
+          padding:0;
+          background-image: radial-gradient(farthest-side at 60% 45%,  #FF7F50, #BC8F8F, #DAA520);
+        }
+      /* The grid: Four equal columns that floats next to each other */
+        #thumb2 {
+          float: left;
+          width: 150px;
+          height: auto;
+          padding: 10px;
+          opacity: 0.8;
+          cursor: pointer;
+        }
+
+        /* Style the images inside the grid */
+
+        #thumb2:hover {
+          opacity: 1;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        /* Clear floats after the columns */
+        .imgrow2:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        /* The expanding image container (positioning is needed to position the close button and the text) */
+        .containerimg2 {
+          position: relative;
+          display: none;
+        }
+
+        /* Expanding image text */
+        #imgtext2 {
+          position: absolute;
+          bottom: 20px;
+          left: 120px;
+          color: white;
+          background-color: #A9A9A9;
+          font-size: 20px;
+        }
+
+        /* Closable button inside the image */
+        .closebtn2 {
+          position: absolute;
+          top: 10px;
+          right: 15px;
+          color: white;
+          font-size: 35px;
+          cursor: pointer;
+        }
+    </style>
+  </head>
+  <body>
+    <h2 style="color: #8A2BE2; text-align: center;">SXC SET Exhibition 2020</h2>
+    <p style="text-align: center; font-size: 1.5rem;">Representing our class team in Social, Environment and Technology(SET) Exhibition organized by our own St. Xavier's College(SXC).</p>
+
+    <!-- The grid: four columns -->
+    <div class="imgrow2" style="margin-left: 50px;">
+      <div class="columnimg2">
+        <img src="IMG_20200207_121717.jpg" alt="Me(Back) and Bibek(Front)!" onclick="myImgFunction2(this);" id="thumb2">
+      </div>
+      <div class="columnimg2">
+        <img src="IMG_20200207_121724.jpg" alt="It's Bibek!" onclick="myImgFunction2(this);" id="thumb2">
+      </div>
+      <!-- <div class="columnimg2">
+        <img src="IMG_20200207_144644.jpg" alt="Mountains" onclick="myImgFunctio2(this);" id="thumb2">
+      </div> -->
+      <div class="columnimg2">
+        <img src="IMG_20200207_144910.jpg" alt="Feeling Sleepy!" onclick="myImgFunction2(this);" id="thumb2">
+      </div>
+      <div class="columnimg2">
+        <img src="IMG_20200207_144917.jpg" alt="That's me and Bibek" onclick="myImgFunction2(this);" id="thumb2">
+      </div>
+    </div>
+
+    <!-- The expanding image container -->
+    <div class="containerimg2">
+      <!-- Close the image -->
+      <span onclick="this.parentElement.style.display='none'" class="closebtn2" style="color: #000000;">&times;</span>
+
+      <!-- Expanded image -->
+      <img id="expandedImg2" style="width: 1000px; margin-left: 100px;">
+
+      <!-- Image text -->
+      <div id="imgtext2"></div>
+    </div>
+
+    <script type="text/javascript">
+    function myImgFunction2(imgs2) {
+      // Get the expanded image
+      var expandImg2 = document.getElementById("expandedImg2");
+      // Get the image text
+      var imgText2 = document.getElementById("imgtext2");
+      // Use the same src in the expanded image as the image being clicked on from the grid
+      expandImg2.src = imgs2.src;
+      // Use the value of the alt attribute of the clickable image as text inside the expanded image
+      imgText2.innerHTML = imgs2.alt;
+      // Show the container element (hidden with CSS)
+      expandImg2.parentElement.style.display = "block";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>excursion</title>
+    <link rel="icon" type="image/png" href="signature.png">
+    <style media="screen">
+        html,
+        body{
+          margin: 2px;
+          padding:0;
+          background-image: radial-gradient(farthest-side at 60% 45%,  #FF7F50, #BC8F8F, #DAA520);
+        }
+      /* The grid: Four equal columns that floats next to each other */
+        #thumb3 {
+          float: left;
+          width: 150px;
+          height: auto;
+          padding: 10px;
+          opacity: 0.8;
+          cursor: pointer;
+        }
+
+        /* Style the images inside the grid */
+
+        #thumb3:hover {
+          opacity: 1;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        /* Clear floats after the columns */
+        .imgrow3:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        /* The expanding image container (positioning is needed to position the close button and the text) */
+        .containerimg3 {
+          position: relative;
+          display: none;
+        }
+
+        /* Expanding image text */
+        #imgtext3 {
+          position: absolute;
+          bottom: 20px;
+          left: 175px;
+          color: white;
+          font-size: 20px;
+          font-weight: bold;
+          background-color: #A9A9A9;
+        }
+
+        /* Closable button inside the image */
+        .closebtn3 {
+          position: absolute;
+          top: 10px;
+          right: 15px;
+          color: black;
+          font-size: 35px;
+          cursor: pointer;
+        }
+    </style>
+  </head>
+  <body>
+    <h2 style="color: #8A2BE2; text-align: center;">Excursion 2019</h2>
+    <p style="text-align: center; font-size: 1.5rem;">Excursion to Godavari and ICIMOD Botanical Garden organized by our college.</p>
+
+    <!-- The grid: four columns -->
+    <div class="imgrow3" style="margin-left: 50px;">
+      <div class="columnimg3">
+        <img src="IMG-cfb391b033a2ca62861334fbd91774b6-V.jpg" alt="Batch 2019, section G, H and I" onclick="myImgFunction3(this);" id="thumb3">
+      </div>
+      <div class="columnimg3">
+        <img src="IMG_1869.jpg" alt="Batch 2019, Chamber H!" onclick="myImgFunction3(this);" id="thumb3">
+      </div>
+      <div class="columnimg3">
+        <img src="IMG_1822.jpg" alt="Godawari!" onclick="myImgFunction3(this);" id="thumb3">
+      </div>
+      <div class="columnimg3">
+        <img src="IMG_1809.jpg" alt="Even Cactus seems beautiful sometimes!" onclick="myImgFunction3(this);" id="thumb3">
+      </div>
+      <div class="columnimg3">
+        <img src="IMG_1778.jpg" alt="Orchid Garden" onclick="myImgFunction3(this);" id="thumb3">
+      </div>
+      <div class="columnimg3">
+        <img src="IMG_1777.jpg" alt="Section H Team" onclick="myImgFunction3(this);" id="thumb3">
+      </div>
+    </div>
+
+    <!-- The expanding image container -->
+    <div class="containerimg3">
+      <!-- Close the image -->
+      <span onclick="this.parentElement.style.display='none'" class="closebtn3" style="color: #000000;">&times;</span>
+
+      <!-- Expanded image -->
+      <img id="expandedImg3" style="width: 1000px; margin-left: 100px;">
+
+      <!-- Image text -->
+      <div id="imgtext3"></div>
+    </div>
+
+    <script type="text/javascript">
+    function myImgFunction3(imgs3) {
+      // Get the expanded image
+      var expandImg3 = document.getElementById("expandedImg3");
+      // Get the image text
+      var imgText3 = document.getElementById("imgtext3");
+      // Use the same src in the expanded image as the image being clicked on from the grid
+      expandImg3.src = imgs3.src;
+      // Use the value of the alt attribute of the clickable image as text inside the expanded image
+      imgText3.innerHTML = imgs3.alt;
+      // Show the container element (hidden with CSS)
+      expandImg3.parentElement.style.display = "block";
+      }
+    </script>
+  </body>
+</html>
