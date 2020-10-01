@@ -3,6 +3,7 @@ html,
 body{
   margin: 2px;
   padding:0;
+  width: 100%;
   background-image: radial-gradient(farthest-side at 60% 45%,  #FF7F50, #BC8F8F, #DAA520);
 }
 /* Header */
