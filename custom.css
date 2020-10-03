@@ -11,6 +11,11 @@ body{
 header > nav > a > img{
   transform: rotate(8deg);
 }
+@media only screen and (max-width: 768px) {
+  header > nav > a > img{
+    transform: rotate(0deg);
+  }
+}
 /* Home */
 .Home{
   margin-top: 3px;
@@ -389,7 +394,7 @@ div.tabcontent {
   text-align: center;
   display: block;
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1000px) {
   .tab{
     width: 100%;
   }
