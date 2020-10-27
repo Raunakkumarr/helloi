@@ -374,6 +374,8 @@ div.desc {
 .img-thumbnails{
   margin-left: auto;
   margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 /* Style the close button */
