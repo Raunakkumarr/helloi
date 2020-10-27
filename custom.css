@@ -65,7 +65,7 @@ h2{
   -moz-animation: glow 1s ease-in-out infinite alternate;
   animation: glow 1s ease-in-out infinite alternate;
 }
-#carouselExampleCaptions{
+.rotAte{
   transform: rotate(5deg);
 }
 @media only screen and (max-width: 1080px) {
