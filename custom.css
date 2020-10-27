@@ -11,7 +11,7 @@ body{
 header > nav > a > img{
   transform: rotate(8deg);
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1080px) {
   header > nav > a > img{
     transform: rotate(0deg);
   }
