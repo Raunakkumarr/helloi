@@ -72,6 +72,9 @@ h2{
   #carouselExampleCaptions{
     transform: rotate(0deg);
   }
+  #me{
+    text-align: justify;
+  }
 }
 @-webkit-keyframes glow {
   from {
